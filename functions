@@ -419,7 +419,8 @@ function build_kernel_deb_package() {
 	local deb_files
 	local build_device_name
 
-	build_device_name=$(echo "${DEVICE_NAME}" | cut -d'_' -f2)
+	#build_device_name=$(echo "${DEVICE_NAME}" | cut -d'_' -f2)
+	build_device_name=$(echo "${DEVICE_NAME}" | cut -d'_' -f2- | tr '_' '-')
 	build_id="$(date +%Y%m%d)-${build_device_name}"
 
 	# shellcheck disable=SC2086
