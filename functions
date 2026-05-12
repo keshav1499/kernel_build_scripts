@@ -158,12 +158,16 @@ function download_toolchain() {
 		local git_url
 
 		git_url="https://gitlab.com/${repo_owner}/${repo_name}"
+		
 		if [[ "${repo_source}" == "github" ]]; then
-			download_url="${git_url}/archive/${tc_version}.tar.gz"
+		    git_url="https://github.com/${repo_owner}/${repo_name}"
+		    download_url="${git_url}/archive/refs/heads/${tc_version}.tar.gz"
+		
 		elif [[ "${repo_source}" == "gitlab" ]]; then
-			download_url="${git_url}/-/archive/${tc_version}/${repo_name}-${tc_version}.tar.gz"
+		    download_url="${git_url}/-/archive/${tc_version}/${repo_name}-${tc_version}.tar.gz"
+		
 		else
-			exit_with_error "Invalid repository source: ${repo_source}"
+		    exit_with_error "Invalid repository source: ${repo_source}"
 		fi
 
 		wget -O "${tc_file}" \
