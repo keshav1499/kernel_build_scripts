@@ -20,7 +20,7 @@ DEVICE_DTB_DIR="${OUT_DIR}/arch/${DEVICE_ARCH}/boot/dts/rockchip"
 # To build kernel with performance configuration
 PERF_BUILD=false
 # To build kernel with clang
-CLANG_BUILD=true
+CLANG_BUILD=false
 # Build modules along with kernel
 MODULES_BUILD=true
 # Build debian package
