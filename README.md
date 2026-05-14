@@ -7,7 +7,7 @@ Kernel building scripts for Vicharak's ARM64 and X86 devices.
 1. Using Git submodule
 
 ```bash
-git submodule add -b main https://github.com/vicharak-in/kernel_build_scripts vicharak
+git submodule add -b axon_lite https://github.com/keshav1499/kernel_build_scripts vicharak
 ```
 
 2. Downloading the scripts
