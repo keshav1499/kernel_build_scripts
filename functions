@@ -164,6 +164,7 @@ function download_toolchain() {
 		    download_url="${git_url}/archive/refs/heads/${tc_version}.tar.gz"
 		
 		elif [[ "${repo_source}" == "gitlab" ]]; then
+		    git_url="https://gitlab.com/${repo_owner}/${repo_name}"
 		    download_url="${git_url}/-/archive/${tc_version}/${repo_name}-${tc_version}.tar.gz"
 		
 		else
