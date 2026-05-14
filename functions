@@ -157,8 +157,6 @@ function download_toolchain() {
 		local download_url
 		local git_url
 
-		git_url="https://gitlab.com/${repo_owner}/${repo_name}"
-		
 		if [[ "${repo_source}" == "github" ]]; then
 		    git_url="https://github.com/${repo_owner}/${repo_name}"
 		    download_url="${git_url}/archive/refs/heads/${tc_version}.tar.gz"
