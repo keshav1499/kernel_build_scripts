@@ -9,7 +9,7 @@
 
 # Device specific
 DEVICE_NAME="rk3576_axon_lite"
-DEVICE_DTB_FILE="rk3576-axon-lite-linux"
+DEVICE_DTB_FILE="rk3576-axon-lite"
 DEVICE_DEFCONFIG="rockchip_linux_defconfig"
 DEVICE_CONFIG_FRAGMENT="rk3576_axon_lite.config"
 DEVICE_ARCH="arm64"
